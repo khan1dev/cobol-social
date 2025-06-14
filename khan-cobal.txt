@@ -1,0 +1,113 @@
+=========================
+  Anotações COBOL Khan
+=========================
+
+🚧 ESTRUTURA BASE DE UM PROGRAMA COBOL:
+
+IDENTIFICATION DIVISION.   *> Nome e identificação do programa  
+ENVIRONMENT DIVISION.      *> Onde define arquivos e dispositivos  
+DATA DIVISION.             *> Onde declara variáveis e arquivos  
+PROCEDURE DIVISION.        *> Onde o programa "roda" de verdade  
+
+------------------------------------------------------------
+
+📦 DATA DIVISION (onde declara as paradas):
+
+- WORKING-STORAGE SECTION.  
+  → Variáveis que você vai usar no programa (tipo memória RAM)
+
+- FILE SECTION.  
+  → Quando for mexer com arquivos (ler, gravar etc)
+
+- LINKAGE SECTION.  
+  → Só usa quando outro programa vai "chamar" esse e passar dados (CALL)
+
+------------------------------------------------------------
+
+📁 COMO MEXER COM ARQUIVOS NO COBOL:
+
+▶ Primeiro, define o arquivo lá na ENVIRONMENT e na FILE SECTION:
+
+ENVIRONMENT DIVISION.  
+FILE-CONTROL.  
+    SELECT ARQUIVO-CLIENTES ASSIGN TO "clientes.txt"  
+        ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.  
+FILE SECTION.  
+FD ARQUIVO-CLIENTES.  
+01 REGISTRO-CLIENTE.  
+    05 NOME     PIC A(30).  
+    05 IDADE    PIC 99.
+
+▶ Abertura do arquivo:
+- OPEN INPUT → pra ler
+- OPEN OUTPUT → pra criar/limpar e gravar
+- OPEN EXTEND → pra adicionar sem apagar o que já tem
+
+▶ Escrever no arquivo:
+
+MOVE "João da Silva" TO NOME  
+MOVE 28 TO IDADE  
+WRITE REGISTRO-CLIENTE
+
+▶ Ler do arquivo:
+
+READ ARQUIVO-CLIENTES  
+    AT END  
+        DISPLAY "Fim do arquivo."  
+    NOT AT END  
+        DISPLAY "Nome: " NOME " Idade: " IDADE
+
+▶ Fechar sempre no final:
+
+CLOSE ARQUIVO-CLIENTES
+
+------------------------------------------------------------
+
+🔁 Como "chamar" outro programa COBOL (tipo importar):
+
+CALL 'NOME-DO-PROGRAMA' USING variavel-ou-parametro
+
+>> Esse nome é o mesmo que tu colocou no PROGRAM-ID. do outro arquivo .cob.
+
+------------------------------------------------------------
+
+🛠️ Fazer "funções" no COBOL (bem raiz, mas resolve):
+
+PERFORM MINHA-FUNCAO
+
+MINHA-FUNCAO.
+    DISPLAY "Rodando função..."
+
+------------------------------------------------------------
+
+📌 Exemplos de variáveis (do jeito que a galera usa mesmo):
+
+01 IDADE     PIC 99.         *> Só 2 dígitos (ex: 18)  
+01 SALARIO   PIC 9(5)V99.    *> Tipo 12345.67 (V = vírgula imaginária)  
+01 NOME      PIC A(30).      *> Texto de até 30 letras  
+
+------------------------------------------------------------
+
+🧰 Comandos mais usados no dia a dia:
+
+- MOVE → Copia valor de uma variável pra outra  
+- IF → Condicional (tipo if no Python/C)  
+- PERFORM → Chama um bloco de código (função)  
+- DISPLAY → Mostra texto na tela  
+- ACCEPT → Pega input do usuário  
+- STOP RUN → Finaliza o programa  
+
+------------------------------------------------------------
+
+💡 Dica final:
+
+Esqueceu como faz alguma coisa? Volta aqui rapidão!  
+COBOL é antigo, mas se organizar direitinho, dá pra fazer muito com ele 😎  
+Não subestime a lenda dos mainframes 👊
+
+------------------------------------------------------------
+
+✍️ Observação:
+Essas anotações foram revisadas com a ajuda do ChatGPT pra corrigir erros de ortografia e deixar tudo mais claro, direto e organizado.
