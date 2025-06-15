@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. MENU-SOCIAL.
+       PROGRAM-ID. COBOL-SOCIAL.
 
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
@@ -24,7 +24,7 @@
 
        PROCEDURE DIVISION.
        INICIO.
-           DISPLAY "=== MENU SOCIAL ==="
+           DISPLAY "=== COBOL SOCIAL ==="
            DISPLAY "1 - Adicionar pessoa"
            DISPLAY "2 - Ver pessoas"
            DISPLAY "3 - Sair"

@@ -1,6 +1,6 @@
-# 💾 CobalSocial
+# 💾 CobolSocial
 
-**CobalSocial** é um pequeno programa em COBOL criado durante o ensino médio com o objetivo de gerenciar minha vida social — principalmente no contexto escolar. Com ele, eu podia registrar:
+**CobolSocial** é um pequeno programa em COBOL criado durante o ensino médio com o objetivo de gerenciar minha vida social — principalmente no contexto escolar. Com ele, eu podia registrar:
 
 - 👤 O nome da pessoa  
 - 📅 A data em que a conheci  
@@ -26,8 +26,8 @@ Inicialmente, eu não conhecia GitHub. Meus projetos eram todos guardados em nuv
 
 ## 🗂️ Arquivos importantes
 
-- `cobalsocial.cob` → Código-fonte do programa em COBOL  
-- `khan-cobal.txt` → Minhas anotações pessoais sobre COBOL (comandos, estrutura, dicas etc). Esse arquivo era meu "guia de sobrevivência" quando dava aquele branco na hora de codar 😄
+- `cobolsocial.cob` → Código-fonte do programa em COBOL  
+- `khan-cobol.txt` → Minhas anotações pessoais sobre COBOL (comandos, estrutura, dicas etc). Esse arquivo era meu "guia de sobrevivência" quando dava aquele branco na hora de codar 😄
 
 ---
 
@@ -50,4 +50,4 @@ Esse projeto é livre para uso pessoal ou educacional. Se for reaproveitar em ou
 
 ## ✍️ Observação
 
-As anotações em `khan-cobal.txt` foram revisadas com a ajuda do **ChatGPT** para corrigir erros de ortografia e deixar tudo mais coeso e organizado.
+As anotações em `khan-cobol.txt` foram revisadas com a ajuda do **ChatGPT** para corrigir erros de ortografia e deixar tudo mais coeso e organizado.
